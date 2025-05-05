@@ -2,7 +2,7 @@ const WebSocket = require('ws');
 const mongoose = require('mongoose');
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/chatapp', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://hariharan98704:LecKPWQPSqzetLu6@cluster1.lf4un.mongodb.net/?retryWrites=true&w=majority&appName=Cluster1', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
